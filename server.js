@@ -5,7 +5,7 @@ var express = require('express');
 var routes = require('./app/routes/index.js');
 
 var app = express();
-var port = 8080;
+var port = Number(process.env.PORT || 8080);
 
 app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 app.use('/public', express.static(process.cwd() + '/public'));
