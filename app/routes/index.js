@@ -10,15 +10,12 @@ module.exports = function (app) {
 			res.sendFile(path + '/public/index.html');
 		});
 
-	app.route('/test')
-		.get(function (req, res) {
-			res.send("Test message!");
-		});
-
 	app.route('/*')
 		.get(function (req, res) {
-			res.send("wildcard!");
+			res.sendFile(path + '/public/timestamp.html');
 		});
+
+
 
 
 };
